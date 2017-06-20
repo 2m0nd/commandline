@@ -19,7 +19,7 @@ namespace CommandLine
         private bool disposed;
         private readonly ParserSettings settings;
         private static readonly Lazy<Parser> DefaultParser = new Lazy<Parser>(
-            () => new Parser(new ParserSettings { HelpWriter = Console.Error }));
+            () => new Parser(new ParserSettings { HelpWriter = Console.Error, CaseInsensitiveEnumValues = true}));
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandLine.Parser"/> class.
